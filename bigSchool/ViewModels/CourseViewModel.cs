@@ -12,6 +12,7 @@ namespace bigSchool.ViewModels
         [Required]
         public string Place { get; set; }
         [Required]
+        [FutureDate]
 
         public string Date { get; set; }
         [Required]

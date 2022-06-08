@@ -9,6 +9,7 @@
 {
 <h2>Create</h2>
 <form>
+    @Html.AntiForgeryToken()
     <div class="form-group">
         @Html.LabelFor(m => m.Place)
         @Html.TextBoxFor(m => m.Place, new { @class = "form-coltrol" })
@@ -29,9 +30,22 @@
 
     </div>
 
- 
-    <button type = "submit" value="Save" class="btn btn-primary">Save</button>
-    
+    <div class="form-group">
+        @Html.LabelFor(m => m.Category)
+        @Html.DropDownListFor(m => m.Category, 
+       new SelectList(Model.Categories, "Id", "Name"), "", new { @class = "form-coltrol" })
+        @Html.ValidationMessageFor(m => m.Category)
+
+    </div>
+
+
+    <button type="submit" value="Save" class="btn btn-primary">Save</button>
+
 </form>
 }
+
+@section scripts
+    {
+        @Scripts.Render("~/bundles/jqueryval");
+    }
 
