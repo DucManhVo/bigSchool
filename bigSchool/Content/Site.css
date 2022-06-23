@@ -14,7 +14,7 @@
 */
 
 .navbar-inverse {
-    background-color: #ff0000;
+    background-color: #1e33a9;
     border-color: aquamarine;
 }
 
@@ -46,7 +46,7 @@ textarea {
 
         .course > li .date {
             text-align: center;
-            background-color: #c3228f;
+            background-color: #1e33a9;
             border-color: #000000;
             color: white;
             width: 60px;
